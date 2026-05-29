@@ -18,7 +18,7 @@ AI assistants are moving beyond chat. They read files, call APIs, use tools, wri
 
 That makes them useful. It also makes them risky.
 
-AgentEnclave is an open project focused on secure runtime environments for AI assistants. The goal is simple: let agents do real work inside clear, enforceable boundaries.
+AgentEnclave is a project focused on secure runtime environments for AI assistants. The goal is simple: let agents do real work inside clear, enforceable boundaries.
 
 Think of it as a safety layer between an AI assistant and the sensitive systems it wants to use.
 
@@ -97,7 +97,7 @@ The project is currently focused on the core security model, developer experienc
 
 This repository is currently informational only.
 
-Public contribution guidelines will be published later if and when the project opens parts of the work for external collaboration.
+Contribution guidelines will be published later if parts of the project become available for external collaboration.
 
 ## Contact
 
