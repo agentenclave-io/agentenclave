@@ -1,42 +1,104 @@
-# AgentEnclave
+<h1 align="center">AgentEnclave</h1>
 
-AgentEnclave is an open project exploring secure runtime environments for AI assistants.
+<p align="center">
+  <strong>Secure runtime boundaries for AI assistants.</strong><br />
+  Give agents the access they need, without giving them the keys to everything.
+</p>
 
-AI agents are quickly moving from chat windows into real work: reading files, calling tools, using APIs, writing code, managing infrastructure, and acting on behalf of people and teams. That creates a simple problem: useful agents need access, but access without boundaries is risky.
+<p align="center">
+  <a href="https://agentenclave.io">Website</a> ·
+  <a href="mailto:nikolay@nikolov.net">Contact</a>
+</p>
 
-AgentEnclave focuses on those boundaries.
+---
 
-The goal is to make AI assistants safer to run by giving them a controlled environment with clear permissions, limited access to sensitive resources, and an auditable record of what happened. The project is designed around practical questions:
+## What is AgentEnclave?
 
-- What should an assistant be allowed to access?
-- Who grants that access?
-- How can secrets be used without exposing them directly to the assistant?
-- How can teams review what an assistant did after the fact?
-- How can the same safety model work across different agent frameworks?
+AI assistants are moving beyond chat. They read files, call APIs, use tools, write code, operate infrastructure, and act on behalf of people and teams.
 
-AgentEnclave is intended to be framework agnostic. It should be possible to use the same security and governance ideas with different assistants, models, tools, and deployment environments.
+That makes them useful. It also makes them risky.
 
-## What we care about
+AgentEnclave is an open project focused on secure runtime environments for AI assistants. The goal is simple: let agents do real work inside clear, enforceable boundaries.
 
-- Safer agent execution
-- Clear permission boundaries
-- Human-controlled access to sensitive capabilities
-- Separation between assistants and the resources they use
-- Auditability for actions taken by AI systems
-- Practical adoption by developers, teams, and organizations
+Think of it as a safety layer between an AI assistant and the sensitive systems it wants to use.
+
+## The problem
+
+Most AI agent setups still treat access as an afterthought.
+
+- Agents often run with too much local access
+- Secrets can be exposed directly to prompts, tools, or logs
+- Network access is difficult to reason about once tools start chaining together
+- Teams lack a clean audit trail of what an assistant did and why
+- Different agent frameworks solve safety in different, incompatible ways
+- Security teams need governance without blocking useful automation
+
+As agents become more capable, "just trust the assistant" is not a security model.
+
+## The idea
+
+AgentEnclave explores a framework-agnostic runtime model for AI assistants.
+
+Instead of giving an assistant direct access to everything, the assistant runs inside an environment where sensitive capabilities are brokered, scoped, and auditable.
+
+The assistant can still be useful. It can still call tools. It can still help users and teams get work done. But access is explicit, limited, and visible.
+
+## What AgentEnclave focuses on
+
+### Runtime isolation
+
+Agents should run in controlled environments with clear boundaries around files, processes, network access, and system resources.
+
+### Brokered capabilities
+
+Sensitive actions should go through controlled interfaces rather than being handed directly to the assistant.
+
+### Secret handling
+
+Agents should be able to use approved credentials without exposing raw secrets in prompts, logs, or tool output.
+
+### Policy-controlled access
+
+Organizations should be able to define what an assistant can access, which actions require approval, and where stricter controls are needed.
+
+### Auditability
+
+Agent activity should leave a useful record: what was requested, what was allowed, what was denied, and what happened next.
+
+### Framework independence
+
+The same safety model should work across different assistants, models, tools, and agent frameworks.
+
+## Who it is for
+
+AgentEnclave is being designed for people and teams who want to use AI agents for real work without ignoring security:
+
+- Developers building agent-based systems
+- Security teams evaluating AI automation
+- Platform teams standardizing internal assistant runtimes
+- Enterprises that need governance, auditability, and control
+- Researchers exploring safer agent execution models
 
 ## What this repository is
 
-This repository is the public entry point for the AgentEnclave project.
+This is the public informational repository for AgentEnclave.
 
-For now, it contains a short public description only. Detailed design notes, implementation plans, and security architecture are not published here yet.
+It is intentionally lightweight. Detailed implementation plans, internal architecture, security design, and operational notes are not published here.
+
+Public updates will be added as the project matures.
 
 ## Status
 
 AgentEnclave is in early design and prototyping.
 
-The public materials will stay high level until the project is ready to share more.
+The project is currently focused on the core security model, developer experience, and practical deployment patterns for controlled AI assistant runtimes.
+
+## Contributing
+
+This repository is currently informational only.
+
+Public contribution guidelines will be published later if and when the project opens parts of the work for external collaboration.
 
 ## Contact
 
-For questions about the project, contact Nikolay Nikolov at nikolay@nikolov.net.
+For questions about AgentEnclave, contact Nikolay Nikolov at [nikolay@nikolov.net](mailto:nikolay@nikolov.net).
